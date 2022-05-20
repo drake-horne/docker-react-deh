@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+
+  docker-react-deh:
+    container_name: docker-react-deh
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/app
+      - ./node_modules:/app/node_modules
+    ports:
+      - '3002:3000'
